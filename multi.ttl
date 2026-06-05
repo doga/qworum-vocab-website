@@ -1,0 +1,42 @@
+# https://vocab.qworum.net/multi.ttl
+
+PREFIX qrmm: <https://vocab.qworum.net/multi.ttl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+<https://vocab.qworum.net/multi.ttl>
+  vann:preferredNamespacePrefix 'qrmm';
+  vann:preferredNamespaceUri 'https://vocab.qworum.net/multi.ttl#'^^xsd:anyURI ;
+  rdfs:comment '''
+    A general-purpose ontology.
+  '''@en.
+
+qrmm:prose a rdf:Property ;
+  rdfs:label 'Translation into human prose'@en;
+  rdfs:comment '''
+    The need to translate RDF into human prose warrants this new property.  In theory `rdfs:label` could have been used for that purpose, but there are many ontologies and datasets out in the wild already that use `rdfs:label` differently.
+  '''@en;
+  rdfs:range rdfs:Literal ;
+  skos:closeMatch xsd:label .
+
+qrmm:anyIRI a rdfs:Datatype ;
+  rdfs:label 'IRI'@en;
+  rdfs:comment '''
+    A literal that is an IRI.
+  '''@en;
+  skos:exactMatch xsd:anyURI .
+
+qrmm:begin a rdf:Property ;
+  rdfs:label 'A marker for the beginning of an RDF file.'@en;
+  rdfs:comment '''
+    This is a marker to be placed near the top of an RDF file (Turtle, TriG, N-triples, N-quads) to ensure a non-truncated transmission over networks. This property implies that there is a `qrmm:end` property placed at the end of the file. Note that RDF formats that are JSON-based or XML-based do not need to use this property.
+  '''@en.
+
+qrmm:end a rdf:Property ;
+  rdfs:label 'A marker for the end of an RDF file.'@en;
+  rdfs:comment '''
+    This is a marker to be placed at the bottom of an RDF file (Turtle, TriG, N-triples, N-quads) to ensure a non-truncated transmission over networks. When an RDF file received over the network contains a `qrmm:start` property but not a `qrmm:end` property, then the file is considered incomplete/truncated.
+  '''@en.
