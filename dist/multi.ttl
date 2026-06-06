@@ -35,7 +35,7 @@ qrmm:md a rdf:Property ;
 qrmm:anyIRI a rdfs:Datatype ;
   rdfs:label 'IRI'@en;
   rdfs:comment '''
-    A literal that is an IRI.
+    A literal that is an IRI. When an IRI does not lead to the definition of an RDF resource, then the IRI should be contained in an RDF literal. And that's why this datatype is useful.
   '''@en;
   skos:exactMatch xsd:anyURI .
 
