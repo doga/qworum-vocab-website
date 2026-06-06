@@ -26,6 +26,15 @@ qrmm:md a rdf:Property ;
   rdfs:label 'Text written in Markdown'@en;
   rdfs:comment '''
     Text written in the Markdown format. Any justification to the right is not significant. This means that the same number of space characters are removed from the beginning of all lines until at least one line starts with a non-space character; only then is the Markdown text parsed.
+
+    YAML frontmatter is allowed, and the optional `lang` attribute defines the content language. Example:
+
+    ---
+    lang: en
+    ---
+    # Title
+
+    Content.
   '''@en;
   rdfs:range rdfs:Literal ;
   rdfs:seeAlso
