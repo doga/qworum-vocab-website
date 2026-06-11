@@ -1,0 +1,10 @@
+# https://vocab.qworum.net/prose-annotations/bio-annotations.ttl
+
+PREFIX qrmm: <https://vocab.qworum.net/multi.ttl#>
+PREFIX bio: <http://purl.org/vocab/bio/0.1/>
+
+[] qrmm:begin [].
+
+bio:olb qrmm:prose 'has this short biography: '@en .
+
+[] qrmm:end [].

@@ -1,0 +1,10 @@
+# https://vocab.qworum.net/prose-annotations/rel-annotations.ttl
+
+PREFIX qrmm: <https://vocab.qworum.net/multi.ttl#>
+PREFIX rel: <http://purl.org/vocab/relationship/>
+
+[] qrmm:begin [].
+
+rel:childOf qrmm:prose 'is the child of'@en .
+
+[] qrmm:end [].

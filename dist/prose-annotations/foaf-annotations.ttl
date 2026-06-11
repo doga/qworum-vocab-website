@@ -1,0 +1,13 @@
+# https://vocab.qworum.net/prose-annotations/foaf-annotations.ttl
+
+PREFIX qrmm: <https://vocab.qworum.net/multi.ttl#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+[] qrmm:begin [].
+
+foaf:Person qrmm:prose 'a person'@en .
+foaf:name qrmm:prose 'has the name'@en .
+foaf:nick qrmm:prose 'has the nickname'@en .
+foaf:knows qrmm:prose 'knows'@en .
+
+[] qrmm:end [].

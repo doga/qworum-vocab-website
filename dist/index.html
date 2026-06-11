@@ -7,22 +7,60 @@
   <style>
     body {
       margin: 5em;
-      font-size:x-large;
+      font-size:large;
       font-weight: bold;
       background-color: rgb(183, 149, 215);
+      section {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+      }
       dt {
         font-size: larger;
+      }
+      .wip::after {
+        content: " 🚧 Work in progress ";
+        margin: 0 0.3em 0 0.3em;
+        font-size: smaller;
+        background-color:darkorchid;
+        color: aliceblue;
       }
     }
   </style>
 </head>
 <body>
-  <h1>
-    Qworum's RDF vocabularies
-  </h1>
-  <dl>
-    <dt><a href="multi.ttl">qrmm</a></dt>
-    <dd>A general-purpose ontology.</dd>
-  </dl>
+  <h1>Qworum's RDF vocabularies</h1>
+  <section id="ontologies">
+    <h2>Ontologies</h2>
+    <dl>
+      <dt id="qrmm"><a href="multi.ttl"><code>qrmm</code></a></dt>
+      <dd>A general-purpose ontology.</dd>
+    </dl>
+  </section>
+
+  <section id="annotations">
+    <h2 class="wip">Prose annotations</h2>
+    <p>Prose annotations are useful for translating RDF statements into human prose, which is understandable by both LLMs and humans.</p>
+    <dl>
+      <dt id="rdf+rdfs"><a href="prose-annotations/rdf-and-rdfs-annotations.ttl"><code>rdf</code> and <code>rdfs</code> annotations</a></dt>
+      <dd>
+        Prose annotations for the <a href="https://www.w3.org/TR/rdf12-schema/" target="_blank" rel="noopener"><code>rdf</code> and <code>rdfs</code> ontologies</a>.
+      </dd>
+
+      <dt id="foaf"><a href="prose-annotations/foaf-annotations.ttl"><code>foaf</code> annotations</a></dt>
+      <dd>
+        Prose annotations for the <a href="https://xmlns.com/foaf/spec/" target="_blank" rel="noopener"><code>foaf</code> ontology</a>.
+      </dd>
+
+      <dt id="bio"><a href="prose-annotations/bio-annotations.ttl"><code>bio</code> annotations</a></dt>
+      <dd>
+        Prose annotations for the <a href="https://vocab.org/bio/" target="_blank" rel="noopener"><code>bio</code> ontology</a>.
+      </dd>
+
+      <dt id="relationship"><a href="prose-annotations/rel-annotations.ttl"><code>rel</code> annotations</a></dt>
+      <dd>
+        Prose annotations for the <a href="https://vocab.org/relationship/" target="_blank" rel="noopener"><code>rel</code> ontology</a>.
+      </dd>
+    </dl>
+  </section>
 </body>
 </html>
