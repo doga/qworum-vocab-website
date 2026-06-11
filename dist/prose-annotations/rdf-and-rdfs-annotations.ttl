@@ -1,4 +1,4 @@
-# https://vocab.qworum.net/prose-annotations/rdf-annotations.ttl
+# https://vocab.qworum.net/prose-annotations/rdf-and-rdfs-annotations.ttl
 
 PREFIX qrmm: <https://vocab.qworum.net/multi.ttl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
