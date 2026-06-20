@@ -7,5 +7,6 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 [] qrmm:begin [].
 
 rdf:type qrmm:prose 'is'@en .
+rdfs:label qrmm:prose 'is'@en .
 
 [] qrmm:end [].

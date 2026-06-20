@@ -1,10 +1,84 @@
 # https://vocab.qworum.net/prose-annotations/bio-annotations.ttl
 
 PREFIX qrmm: <https://vocab.qworum.net/multi.ttl#>
-PREFIX bio: <http://purl.org/vocab/bio/0.1/>
+PREFIX bio: <http://purl.org/vocab/bio/0.1/> # https://vocab.org/bio/
 
 [] qrmm:begin [].
 
-bio:olb qrmm:prose 'has this short biography: '@en .
+bio:Accession qrmm:prose 'an accession to the throne'@en .
+bio:Adoption qrmm:prose 'an adoption'@en .
+bio:agent qrmm:prose 'a person, organization or group'@en .
+bio:Relationship qrmm:prose 'a relationship'@en .
+bio:Annulment qrmm:prose 'an annulment'@en .
+bio:Assassination qrmm:prose 'an assassination'@en .
+bio:Baptism qrmm:prose 'a baptism'@en .
+bio:BarMitzvah qrmm:prose 'a Bar Mitzvah'@en .
+bio:BasMitzvah qrmm:prose 'a Bas Mitzvah'@en .
+bio:biography qrmm:prose 'has the biography'@en .
+bio:Birth qrmm:prose 'a birth'@en .
+bio:birth qrmm:prose 'has the birth event description'@en .
+bio:Burial qrmm:prose 'a burial'@en .
+bio:NameChange qrmm:prose 'a name change'@en .
+bio:PositionChange qrmm:prose 'a position change'@en .
+bio:child qrmm:prose 'has the child'@en .
+bio:concludingEvent qrmm:prose 'was ended by'@en .
+bio:concurrentEvent qrmm:prose 'is concurrent with'@en .
+bio:Coronation qrmm:prose 'a coronation'@en .
+bio:Cremation qrmm:prose 'a cremation'@en .
+bio:date qrmm:prose 'happened on'@en .
+bio:Death qrmm:prose 'a death'@en .
+bio:death qrmm:prose 'has the death event description'@en .
+bio:Demotion qrmm:prose 'a demotion'@en .
+bio:Disbanding qrmm:prose 'a disbanding'@en .
+bio:Dismissal qrmm:prose 'a dismissal'@en .
+bio:Divorce qrmm:prose 'a divorce'@en .
+bio:Emigration qrmm:prose 'an emigration'@en .
+bio:employer qrmm:prose 'had the employer'@en .
+bio:Employment qrmm:prose 'an employment'@en .
+bio:Enrolment qrmm:prose 'en enrolment'@en .
+bio:Event qrmm:prose 'an event'@en .
+bio:eventInterval qrmm:prose 'has occured during this period:'@en .
+bio:Execution qrmm:prose 'an execution'@en .
+bio:father qrmm:prose 'is the child of'@en .
+bio:followingEvent qrmm:prose 'was followed by'@en .
+bio:Formation qrmm:prose 'a formation'@en .
+bio:Funeral qrmm:prose 'a funeral'@en .
+bio:Graduation qrmm:prose 'a graduation'@en .
+bio:GroupEvent qrmm:prose 'an event'@en .
+bio:immediatelyFollowingEvent qrmm:prose 'was immediately followed by'@en .
+bio:immediatelyPrecedingEvent qrmm:prose 'was immediately preceded by'@en .
+bio:Imprisonment qrmm:prose 'an imprisonment'@en .
+bio:Inauguration qrmm:prose 'an inauguration'@en .
+bio:IndividualEvent qrmm:prose 'an event'@en .
+bio:initiatingEvent qrmm:prose 'has the initiating event'@en .
+bio:Interval qrmm:prose 'an interval'@en .
+bio:Investiture qrmm:prose 'an investiture'@en .
+bio:keywords qrmm:prose 'is described by the keywords'@en .
+bio:event qrmm:prose 'was associated in the event'@en .
+bio:Marriage qrmm:prose 'a marriage'@en .
+bio:mother qrmm:prose 'is the child of'@en .
+bio:Murder qrmm:prose 'a murder'@en .
+bio:Naturalization qrmm:prose 'a naturalisation'@en .
+bio:officiator qrmm:prose 'officiated at'@en .
+bio:olb qrmm:prose 'has this short biography:'@en .
+bio:Ordination qrmm:prose 'an ordination'@en .
+bio:organization qrmm:prose 'has involved'@en .
+bio:parent qrmm:prose 'was involved as parent in'@en .
+bio:participant qrmm:prose 'was involved in'@en .
+bio:partner qrmm:prose 'was involved as partner in'@en .
+bio:Performance qrmm:prose 'a performance'@en .
+bio:place qrmm:prose 'happened in'@en .
+bio:position qrmm:prose 'occupied the post'@en .
+bio:precedingEvent qrmm:prose 'was preceded by'@en .
+bio:principal qrmm:prose 'was the principal person at'@en .
+bio:Promotion qrmm:prose 'a promotion'@en .
+bio:Redundancy qrmm:prose 'a redundancy'@en .
+bio:relationship qrmm:prose 'was involved with'@en .
+bio:interval qrmm:prose 'was current during'@en .
+bio:Resignation qrmm:prose 'a resignation'@en .
+bio:Retirement qrmm:prose 'a retirement'@en .
+bio:spectator qrmm:prose 'was spectator to'@en .
+bio:state qrmm:prose 'involved'@en .
+bio:witness qrmm:prose 'has witnessed'@en .
 
 [] qrmm:end [].

@@ -5,6 +5,43 @@ PREFIX rel: <http://purl.org/vocab/relationship/>
 
 [] qrmm:begin [].
 
+# Classes
+rel:Relationship qrmm:prose 'a relationship'@en .
+
+# Properties
+rel:acquaintanceOf qrmm:prose 'is acquainted to'@en .
+rel:ambivalentOf qrmm:prose 'has mixed feelings about'@en .
+rel:ancestorOf qrmm:prose 'is the ancestor of'@en .
+rel:antagonistOf qrmm:prose 'is antagonistic towards'@en .
+rel:apprenticeTo qrmm:prose 'is the apprentice of'@en .
 rel:childOf qrmm:prose 'is the child of'@en .
+rel:closeFriendOf qrmm:prose 'is close friends with'@en .
+rel:collaboratesWith qrmm:prose 'works with'@en .
+rel:colleagueOf qrmm:prose 'is colleagues with'@en .
+rel:descendantOf qrmm:prose 'is the descendant of'@en .
+rel:employedBy qrmm:prose 'is employed by'@en .
+rel:employerOf qrmm:prose 'is the employer of'@en .
+rel:enemyOf qrmm:prose 'is the enemy of'@en .
+rel:engagedTo qrmm:prose 'is engaged to'@en .
+rel:friendOf qrmm:prose 'is friends with'@en .
+rel:grandchildOf qrmm:prose 'is the grandchild of'@en .
+rel:grandparentOf qrmm:prose 'is the grandparent of'@en .
+rel:hasMet qrmm:prose 'has met'@en .
+rel:influencedBy qrmm:prose 'was influenced by'@en .
+rel:knowsByReputation qrmm:prose 'has heard of'@en .
+rel:knowsInPassing qrmm:prose 'vaguely knows'@en .
+rel:knowsOf qrmm:prose 'knows'@en .
+rel:lifePartnerOf qrmm:prose 'is living in partnership with'@en .
+rel:livesWith qrmm:prose 'lives with'@en .
+rel:lostContactWith qrmm:prose 'has lost contact with'@en .
+rel:mentorOf qrmm:prose 'is the mentor of'@en .
+rel:neighborOf qrmm:prose 'is neighbours with'@en .
+rel:parentOf qrmm:prose 'is the parent of'@en .
+rel:participant qrmm:prose 'has the participant'@en .
+rel:participantIn qrmm:prose 'is a participant in'@en .
+rel:siblingOf qrmm:prose 'is the sibling of'@en .
+rel:spouseOf qrmm:prose 'is the spouse of'@en .
+rel:worksWith qrmm:prose 'works with'@en .
+rel:wouldLikeToKnow qrmm:prose 'wishes to get to know'@en .
 
 [] qrmm:end [].
