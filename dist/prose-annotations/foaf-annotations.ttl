@@ -60,7 +60,7 @@ foaf:logo qrmm:prose 'has the logo'@en .
 foaf:mbox_sha1sum qrmm:prose 'has a mailbox address URL with the SHA1 checksum'@en .
 foaf:msnChatID qrmm:prose 'has the MSN chat ID'@en .
 foaf:myersBriggs qrmm:prose 'has the Myers Briggs personality classification code'@en .
-foaf:name qrmm:prose 'has the name'@en .
+# foaf:name qrmm:prose 'has the name'@en . // redundant with the subject's prose annotation
 foaf:nick qrmm:prose 'has the nickname'@en .
 foaf:openid qrmm:prose 'has the OpenID'@en .
 foaf:pastProject qrmm:prose 'has worked on the project'@en .
