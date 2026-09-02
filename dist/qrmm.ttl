@@ -1,15 +1,15 @@
-# https://vocab.qworum.net/multi.ttl
+# https://vocab.qworum.net/qrmm.ttl
 
-PREFIX qrmm: <https://vocab.qworum.net/multi.ttl#>
+PREFIX qrmm: <https://vocab.qworum.net/qrmm.ttl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX vann: <http://purl.org/vocab/vann/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-<https://vocab.qworum.net/multi.ttl>
+<https://vocab.qworum.net/qrmm.ttl>
   vann:preferredNamespacePrefix 'qrmm';
-  vann:preferredNamespaceUri 'https://vocab.qworum.net/multi.ttl#'^^xsd:anyURI ;
+  vann:preferredNamespaceUri 'https://vocab.qworum.net/qrmm.ttl#'^^xsd:anyURI ;
   rdfs:comment '''
     A general-purpose ontology.
   '''@en.

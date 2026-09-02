@@ -1,6 +1,6 @@
 # https://vocab.qworum.net/prose-annotations/bio-annotations.ttl
 
-PREFIX qrmm: <https://vocab.qworum.net/multi.ttl#>
+PREFIX qrmm: <https://vocab.qworum.net/qrmm.ttl#>
 PREFIX bio: <http://purl.org/vocab/bio/0.1/> # https://vocab.org/bio/
 
 [] qrmm:begin [].

@@ -1,6 +1,6 @@
 # https://vocab.qworum.net/prose-annotations/foaf-annotations.ttl
 
-PREFIX qrmm: <https://vocab.qworum.net/multi.ttl#>
+PREFIX qrmm: <https://vocab.qworum.net/qrmm.ttl#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
 [] qrmm:begin [].
