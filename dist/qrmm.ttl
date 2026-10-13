@@ -1,6 +1,6 @@
-# https://vocab.qworum.net/qrmm.ttl
+BASE <https://vocab.qworum.net/qrmm.ttl>
 
-PREFIX qrmm: <https://vocab.qworum.net/qrmm.ttl#>
+PREFIX qrmm: <#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -10,12 +10,13 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 <https://vocab.qworum.net/qrmm.ttl>
   vann:preferredNamespacePrefix 'qrmm';
   vann:preferredNamespaceUri 'https://vocab.qworum.net/qrmm.ttl#'^^xsd:anyURI ;
+  rdfs:label 'QRMM Ontology'@en;
   rdfs:comment '''
     A general-purpose ontology.
   '''@en.
 
 qrmm:prose a rdf:Property ;
-  rdfs:label 'Translation into human prose'@en;
+  rdfs:label 'Prose'@en;
   rdfs:comment '''
     The need to translate RDF into human prose warrants this new property. An RDF statement can be turned into human prose by concatenating the `qrmm:prose` values of the statement's subject, predicate and object (or in the reverse order). Note that this translation mechanism is applicable to many mainstream human languages, but not to all languages. In theory, `rdfs:label` could have been used for this purpose, but there are many ontologies and datasets out in the wild already that use `rdfs:label` differently.
   '''@en;
@@ -23,7 +24,7 @@ qrmm:prose a rdf:Property ;
   skos:closeMatch rdfs:label .
 
 qrmm:md a rdf:Property ;
-  rdfs:label 'Text written in Markdown'@en;
+  rdfs:label 'Markdown'@en;
   rdfs:comment '''
     Text written in the Markdown format. Any justification to the right is not significant. This means that the same number of space characters are removed from the beginning of all lines until at least one line starts with a non-space character; only then is the Markdown text parsed.
 
@@ -49,13 +50,13 @@ qrmm:anyIRI a rdfs:Datatype ;
   skos:exactMatch xsd:anyURI .
 
 qrmm:begin a rdf:Property ;
-  rdfs:label 'A marker for the beginning of an RDF file.'@en;
+  rdfs:label 'Beginning of an RDF file'@en;
   rdfs:comment '''
     This is a marker to be placed near the top of an RDF file (Turtle, TriG, N-triples, N-quads) to ensure a non-truncated transmission over networks. This property implies that there is a `qrmm:end` property placed at the end of the file. Note that RDF formats that are JSON-based or XML-based do not need to use this property.
   '''@en.
 
 qrmm:end a rdf:Property ;
-  rdfs:label 'A marker for the end of an RDF file.'@en;
+  rdfs:label 'End of an RDF file'@en;
   rdfs:comment '''
     This is a marker to be placed at the bottom of an RDF file (Turtle, TriG, N-triples, N-quads) to ensure a non-truncated transmission over networks. When an RDF file received over the network contains a `qrmm:start` property but not a `qrmm:end` property, then the file is considered incomplete/truncated.
   '''@en.
