@@ -1,15 +1,15 @@
 BASE <https://vocab.qworum.net/qrmm.ttl>
 
 PREFIX qrmm: <#>
+PREFIX qrmd: <https://vocab.qworum.net/qrmd.ttl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX vann: <http://purl.org/vocab/vann/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 <https://vocab.qworum.net/qrmm.ttl>
   vann:preferredNamespacePrefix 'qrmm';
-  vann:preferredNamespaceUri 'https://vocab.qworum.net/qrmm.ttl#'^^xsd:anyURI ;
+  vann:preferredNamespaceUri 'https://vocab.qworum.net/qrmm.ttl#'^^qrmd:anyIRI ;
   rdfs:label 'QRMM Ontology'@en;
   rdfs:comment '''
     A general-purpose ontology.
@@ -22,32 +22,6 @@ qrmm:prose a rdf:Property ;
   '''@en;
   rdfs:range rdfs:Literal ;
   skos:closeMatch rdfs:label .
-
-qrmm:md a rdf:Property ;
-  rdfs:label 'Markdown'@en;
-  rdfs:comment '''
-    Text written in the Markdown format. Any justification to the right is not significant. This means that the same number of space characters are removed from the beginning of all lines until at least one line starts with a non-space character; only then is the Markdown text parsed.
-
-    YAML frontmatter is allowed, and the optional `lang` attribute defines the content language. Example:
-
-    ---
-    lang: en
-    ---
-    # Title
-
-    Content.
-  '''@en;
-  rdfs:range rdfs:Literal ;
-  rdfs:seeAlso
-    'https://en.wikipedia.org/wiki/Markdown'^^xsd:anyURI ,
-    'https://daringfireball.net/projects/markdown/'^^xsd:anyURI .
-
-qrmm:anyIRI a rdfs:Datatype ;
-  rdfs:label 'IRI'@en;
-  rdfs:comment '''
-    A literal that is an IRI. When an IRI does not lead to the definition of an RDF resource, then the IRI should be contained in an RDF literal. And that's why this datatype is useful.
-  '''@en;
-  skos:exactMatch xsd:anyURI .
 
 qrmm:begin a rdf:Property ;
   rdfs:label 'Beginning of an RDF file'@en;

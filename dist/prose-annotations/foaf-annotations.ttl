@@ -1,28 +1,39 @@
 # https://vocab.qworum.net/prose-annotations/foaf-annotations.ttl
-
 PREFIX qrmm: <https://vocab.qworum.net/qrmm.ttl#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
 [] qrmm:begin [].
 
 # Classes (stable)
-foaf:Agent qrmm:prose 'is an agent capable of action'@en .
-foaf:Document qrmm:prose 'is a physical or digital document'@en .
-foaf:Group qrmm:prose 'is a collection of agents, and is itself an agent'@en .
-foaf:Image qrmm:prose 'is a physical or digital document which is an image'@en .
-foaf:Organization qrmm:prose 'is a kind of agent corresponding to social instititutions such as companies, societies etc'@en .
-foaf:Person qrmm:prose 'is a person'@en .
+foaf:Agent qrmm:prose 
+  'an agent'@en,
+  'un agent'@fr,
+  'ein Agent'@de.
+foaf:Document qrmm:prose 
+  'a document'@en,
+  'un document'@fr,
+  'ein Dokument'@de.
+foaf:Group qrmm:prose 
+  'a group'@en,
+  'un groupe'@fr,
+  'eine Gruppe'@de.
+foaf:Image qrmm:prose 
+  'an image'@en,
+  'an image'@fr,
+  'an image'@de.
+foaf:Organization qrmm:prose 'an organisation'@en-GB .
+foaf:Person qrmm:prose 'a person'@en .
 
 # Classes (testing)
-foaf:OnlineAccount qrmm:prose "is an agent's account in an online service"@en .
-foaf:PersonalProfileDocument qrmm:prose 'is a personal profile RDF document'@en .
-foaf:Project qrmm:prose "is a project, so it's an individual or collective endeavour of some kind"@en .
+foaf:OnlineAccount qrmm:prose "an online account"@en .
+foaf:PersonalProfileDocument qrmm:prose 'a personal profile'@en .
+foaf:Project qrmm:prose 'a project'@en .
 
 # Classes (unstable)
-foaf:LabelProperty qrmm:prose 'is labelled as'@en .
-foaf:OnlineChatAccount qrmm:prose 'is an online chat account'@en .
-foaf:OnlineEcommerceAccount qrmm:prose 'is an online e-commerce account'@en .
-foaf:OnlineGamingAccount qrmm:prose 'is an online gaming account'@en .
+foaf:LabelProperty qrmm:prose 'a label'@en .
+foaf:OnlineChatAccount qrmm:prose 'an online chat account'@en .
+foaf:OnlineEcommerceAccount qrmm:prose 'an online e-commerce account'@en .
+foaf:OnlineGamingAccount qrmm:prose 'an online gaming account'@en .
 
 
 # Properties (stable)
@@ -57,10 +68,13 @@ foaf:interest qrmm:prose 'is interested in'@en .
 foaf:jabberID qrmm:prose 'has the Jabber ID'@en .
 foaf:lastName qrmm:prose 'has the last name'@en .
 foaf:logo qrmm:prose 'has the logo'@en .
-foaf:mbox_sha1sum qrmm:prose 'has a mailbox address URL with the SHA1 checksum'@en .
+foaf:mbox_sha1sum qrmm:prose 'has the SHA1 hash'@en .
 foaf:msnChatID qrmm:prose 'has the MSN chat ID'@en .
 foaf:myersBriggs qrmm:prose 'has the Myers Briggs personality classification code'@en .
-# foaf:name qrmm:prose 'has the name'@en . // redundant with the subject's prose annotation
+foaf:name qrmm:prose # redundant with the subject's prose annotation 
+  'has the name'@en,
+  'est nommé'@fr,
+  'hat den Namen'@de.
 foaf:nick qrmm:prose 'has the nickname'@en .
 foaf:openid qrmm:prose 'has the OpenID'@en .
 foaf:pastProject qrmm:prose 'has worked on the project'@en .
@@ -69,7 +83,7 @@ foaf:plan qrmm:prose 'has a .plan file that says'@en .
 foaf:publications qrmm:prose 'has published'@en .
 foaf:schoolHomepage qrmm:prose 'has attended the school that has the homepage'@en .
 foaf:skypeID qrmm:prose 'has the Skype ID'@en .
-foaf:thumbnail qrmm:prose 'is depicted in an image whose thumbnail version is'@en .
+foaf:thumbnail qrmm:prose 'has the thumbnail'@en .
 foaf:tipjar qrmm:prose 'accepts payments as described in'@en .
 foaf:title qrmm:prose 'has the title'@en .
 foaf:topic qrmm:prose 'has the topic'@en .
@@ -94,6 +108,5 @@ foaf:givenname qrmm:prose 'has the given name'@en .
 foaf:holdsAccount qrmm:prose 'holds the account'@en .
 foaf:surname qrmm:prose 'has the surname'@en .
 foaf:theme qrmm:prose 'broadly fits the theme'@en .
-
 
 [] qrmm:end [].
