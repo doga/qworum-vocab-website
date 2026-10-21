@@ -322,8 +322,8 @@ _:elizblount
 _:child8
   a foaf:Person
   ; foaf:name "Henry FitzRoy"
-  ; foaf:mother _:elizblount
-  ; foaf:father _:henryviii
+  ; bio:mother _:elizblount
+  ; bio:father _:henryviii
   ; bio:event [ a bio:Birth
                 ; bio:principal _:child8
                 ; bio:date "1519-06-15"
