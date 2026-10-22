@@ -20,7 +20,7 @@ bio:birth qrmm:prose 'has the birth event description'@en .
 bio:Burial qrmm:prose 'a burial'@en .
 bio:NameChange qrmm:prose 'a name change'@en .
 bio:PositionChange qrmm:prose 'a position change'@en .
-bio:child qrmm:prose 'has the child'@en .
+bio:child qrmm:prose 'is the parent of'@en .
 bio:concludingEvent qrmm:prose 'ended by'@en .
 bio:concurrentEvent qrmm:prose 'is concurrent with'@en .
 bio:Coronation qrmm:prose 'a coronation'@en .
