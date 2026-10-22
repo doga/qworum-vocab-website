@@ -1,12 +1,14 @@
 # https://vocab.org/bio/#agent:~:text=A%20Biography%20of%20Henry%20VIII%2C%20King%20of%20England
 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX bio: <http://purl.org/vocab/bio/0.1/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX qrmm: <https://vocab.qworum.net/qrmm.ttl#>
 
 _:henryviii
   a foaf:Person
-  ; foaf:name "Henry VIII, King of England"
+  ; rdfs:label "Henry VIII, King of England"
+  ; foaf:name "Henry VIII"
   ; bio:father _:henryvii
   ; bio:mother _:elizplantagenet
   ; bio:child _:child1, _:child2, _:child3, _:child4, _:child5, _:child6, _:child7, _:child8
@@ -18,7 +20,8 @@ _:henryviii
 
 _:henryvii
   a foaf:Person
-  ; foaf:name "Henry VII Tudor, King of England"
+  ; rdfs:label "Henry VII Tudor, King of England"@en
+  ; foaf:name "Henry VII Tudor"
   ; bio:child _:henryviii
   .
 
@@ -30,7 +33,8 @@ _:elizplantagenet
   
 _:birth
   a bio:Birth
-  ; rdfs:label "The birth of Henry VIII to Henry VII and Elizabeth Plantagenet on 28 June 1491"
+  ; rdfs:label "The birth of Henry VIII to Henry VII and Elizabeth Plantagenet on 28 June 1491"@en
+  ; qrmm:prose "the birth of Henry VIII"@en
   ; bio:date "1491-06-28"
   ; bio:place <http://dbpedia.org/resource/Palace_of_Placentia>
   ; bio:parent _:henryvii, _:elizplantagenet
@@ -39,7 +43,8 @@ _:birth
 
 _:death
   a bio:Death
-  ; rdfs:label "The death of Henry VIII on 28 January 1547"
+  ; rdfs:label "The death of Henry VIII on 28 January 1547"@en
+  ; qrmm:prose "the death of Henry VIII"@en
   ; bio:date "1547-01-28"
   ; bio:place <http://dbpedia.org/resource/Palace_of_Whitehall>
   ; bio:principal _:henryviii
@@ -48,12 +53,14 @@ _:death
 
 _:accession
   a bio:Accession
-  ; rdfs:label "The accession of Henry VIII to the throne of England on 21 April 1509"
+  ; rdfs:label "The accession of Henry VIII to the throne of England on 21 April 1509"@en
+  ; qrmm:prose "the accession of Henry VIII to the throne"@en
   ; bio:date "1509-06-24"
   ; bio:principal _:henryviii
   ; bio:state <http://dbpedia.org/resource/Kingdom_of_England>
   ; bio:immediatelyPrecedingEvent [ a bio:Death
-                                    ; rdfs:label "The death of Henry VII on 9 May 1509"
+                                    ; rdfs:label "The death of Henry VII on 9 May 1509"@en
+                                    ; qrmm:prose "The death of Henry VII"@en
                                     ; bio:date "1509-05-09"
                                     ; bio:place <http://dbpedia.org/resource/Richmond_Palace>
                                     ; bio:principal _:henryvii
@@ -62,7 +69,8 @@ _:accession
 
 _:coronation
   a bio:Coronation
-  ; rdfs:label "The coronation of Henry VIII as King of England on 24 June 1509"
+  ; rdfs:label "The coronation of Henry VIII as King of England on 24 June 1509"@en
+  ; qrmm:prose "The coronation of Henry VIII"@en
   ; bio:date "1509-06-24"
   ; bio:place <http://dbpedia.org/page/Westminster_Abbey>
   ; bio:principal _:henryviii
@@ -71,44 +79,47 @@ _:coronation
 
 _:burial
   a bio:Burial
-  ; rdfs:label "The burial of Henry VII at St.George's Chapel, Windsor Castle,England"
   ; bio:place <http://dbpedia.org/resource/St_George%E2%80%99s_Chapel%2C_Windsor>
+  ; rdfs:label "The burial of Henry VII"@en
   ; bio:principal _:henryviii
   ; bio:precedingEvent _:death
   .
 
 _:marriage1
   a bio:Marriage
-  ; rdfs:label "The marriage of Henry VIII and Catherine of Aragon"
+  ; rdfs:label "The marriage of Henry VIII and Catherine of Aragon"@en
   ; bio:date "1509-06-11"
   ; bio:place <http://dbpedia.org/resource/Palace_of_Placentia>
-  ; bio:partner _:henryvii, _:catharagon
+  ; bio:partner _:henryviii, _:catharagon
   .
 
 _:annulment1
   a bio:Annulment
-  ; rdfs:label "The annulment of the marriage between Henry VIII and Catherine of Aragon"
+  ; rdfs:label "The annulment of the marriage between Henry VIII and Catherine of Aragon"@en
   ; bio:date "1533-05-23"
-  ; bio:partner _:henryvii, _:catharagon 
+  ; bio:partner _:henryviii, _:catharagon 
   ; bio:officiator <http://dbpedia.org/resource/Thomas_Cranmer>
   .
 
 _:catharagon
   a foaf:Person
-  ; foaf:name "Anne Boleyn"
+  ; foaf:name "Catherine of Aragon"
   ; bio:child _:child1, _:child2, _:child3, _:child4, _:child5
   ; bio:event _:marriage1, _:annulment1
   .
 
 _:child1
   a foaf:Person
-  ; rdfs:label "Unnamed daughter of Henry VIII and Catherine of Aragon"
+  ; rdfs:label "Unnamed daughter of Henry VIII and Catherine of Aragon"@en
+  ; qrmm:prose "an unnamed daughter"@en
   ; bio:event [ a bio:Birth
+                ; qrmm:prose 'the birth of an unnamed daughter'@en
                 ; bio:date "1510-01-31"
                 ; bio:principal _:child1
                 ; bio:parent _:henryviii, _:catharagon
               ]
   ; bio:event [ a bio:Death
+                ; qrmm:prose 'the death of an unnamed daughter'@en
                 ; bio:date "1510-02-02"
                 ; bio:principal _:child1
               ]
@@ -118,11 +129,13 @@ _:child2
   a foaf:Person
   ; foaf:name "Henry"
   ; bio:event [ a bio:Birth
+                ; qrmm:prose "Henry's birth"@en
                 ; bio:date "1511-01-01"
                 ; bio:principal _:child2
                 ; bio:parent _:henryviii, _:catharagon
               ]
   ; bio:event [ a bio:Death
+                ; qrmm:prose "Henry's death"@en
                 ; bio:date "1511-02-22"
                 ; bio:principal _:child2
               ]
@@ -132,11 +145,13 @@ _:child3
   a foaf:Person
   ; foaf:name "Henry"
   ; bio:event [ a bio:Birth
+                ; qrmm:prose "Henry's birth"@en
                 ; bio:date "1514-12"
                 ; bio:principal _:child3
                 ; bio:parent _:henryviii, _:catharagon
               ]
   ; bio:event [ a bio:Death
+                ; qrmm:prose "Henry's death"@en
                 ; bio:principal _:child3
               ]
   .
@@ -145,11 +160,13 @@ _:child4
   a foaf:Person
   ; foaf:name "Mary"
   ; bio:event [ a bio:Birth
+                ; qrmm:prose "Mary's birth"@en
                 ; bio:date "1516-02-18"
                 ; bio:principal _:child4
                 ; bio:parent _:henryviii, _:catharagon
               ]
   ; bio:event [ a bio:Death
+                ; qrmm:prose "Mary's death"@en
                 ; bio:date "1558-11-17"
                 ; bio:principal _:child4
               ]
@@ -158,13 +175,16 @@ _:child4
 
 _:child5
   a foaf:Person
-  ; rdfs:label "Unnamed daughter of Henry VIII and Catherine of Aragon"
+  ; rdfs:label "Unnamed daughter of Henry VIII and Catherine of Aragon"@en
+  ; qrmm:prose "an unnamed daughter"@en
   ; bio:event [ a bio:Birth
+                ; qrmm:prose 'the birth of an unnamed daughter'@en
                 ; bio:date "1518-11"
                 ; bio:principal _:child5
                 ; bio:parent _:henryviii, _:catharagon
               ]
   ; bio:event [ a bio:Death
+                ; qrmm:prose 'the death of an unnamed daughter'@en
                 ; bio:principal _:child5
               ]
   .
@@ -172,9 +192,9 @@ _:child5
 
 _:marriage2
   a bio:Marriage
-  ; rdfs:label "The marriage of Henry VIII and Anne Boleyn"
+  ; rdfs:label "The marriage of Henry VIII and Anne Boleyn"@en
   ; bio:date "1533-01-25"
-  ; bio:partner _:henryvii, _:anneboleyn
+  ; bio:partner _:henryviii, _:anneboleyn
   ; bio:place <http://dbpedia.org/resource/Westminster_Abbey>
   .
 
@@ -187,14 +207,14 @@ _:anneboleyn
 
 _:annulment2
   a bio:Annulment
-  ; rdfs:label "The annulment of the marriage between Henry VIII and Anne Boleyn"
+  ; rdfs:label "The annulment of the marriage between Henry VIII and Anne Boleyn"@en
   ; bio:date "1536-05-17"
   ; bio:partner _:henryvii, _:anneboleyn 
   .
   
 _:anneboleyn-death
   a bio:Execution
-  ; rdfs:label "The beheading of Anne Boleyn"
+  ; rdfs:label "The beheading of Anne Boleyn"@en
   ; bio:date "1536-05-19"
   ; bio:place <http://dbpedia.org/resource/Tower_of_London>
   ; bio:principal _:anneboleyn
@@ -204,11 +224,13 @@ _:child6
   a foaf:Person
   ; foaf:name "Elizabeth"
   ; bio:event [ a bio:Birth
+                ; qrmm:prose "Elizabeth's birth"@en
                 ; bio:date "1533-09-07"
                 ; bio:principal _:child6
                 ; bio:parent _:henryviii, _:anneboleyn
               ]
   ; bio:event [ a bio:Death
+                ; qrmm:prose "Elizabeth's death"@en
                 ; bio:date "1603-03-24"
                 ; bio:principal _:child6
               ]
@@ -216,6 +238,7 @@ _:child6
 
 _:marriage3
   a bio:Marriage
+  ; qrmm:prose "The marriage of Henry VIII and Jane Seymour"@en
   ; bio:date "1536-05-20"
   ; bio:partner _:henryviii, _:janeseymour
   ; bio:place <http://dbpedia.org/resource/York_Place>
@@ -230,7 +253,8 @@ _:janeseymour
 
 _:janeseymour-death
   a bio:Death
-  ; rdfs:label "The death of Jane Seymour on 24 October 1537"
+  ; rdfs:label "The death of Jane Seymour on 24 October 1537"@en
+  ; qrmm:prose "The death of Jane Seymour"@en
   ; bio:date "1537-10-24"
   ; bio:principal _:janeseymour
   ; bio:place <http://dbpedia.org/resource/Hampton_Court_Palace>
@@ -241,15 +265,18 @@ _:child7
   a foaf:Person
   ; foaf:name "Edward"
   ; bio:event [ a bio:Birth
+                ; qrmm:prose "Edward's birth"@en
                 ; bio:date "1537-10-12"
                 ; bio:principal _:child7
                 ; bio:parent _:henryviii, _:janeseymour
                 ; bio:place <http://dbpedia.org/resource/Hampton_Court_Palace>
               ]
   ; bio:event [ a bio:Accession
+                ; qrmm:prose "Edward's accession"@en
                 ; bio:immediatelyPrecedingEvent _:death
               ]
   ; bio:event [ a bio:Death
+                ; qrmm:prose "Edward's death"@en
                 ; bio:date "1553-07-06"
                 ; bio:principal _:child7
                 ; bio:place <http://dbpedia.org/resource/Palace_of_Placentia>
@@ -258,6 +285,7 @@ _:child7
 
 _:marriage4
   a bio:Marriage
+  ; qrmm:prose "The marriage of Henry VIII and Jane Seymour"@en
   ; bio:date "1540-01-06"
   ; bio:partner _:henryvii, _:annecleves
   ; bio:place <http://dbpedia.org/resource/Palace_of_Placentia>
@@ -266,7 +294,7 @@ _:marriage4
     
 _:annulment3
   a bio:Annulment
-  ; rdfs:label "The annulment of the marriage between Henry VIII and Anne of Cleves"
+  ; rdfs:label "The annulment of the marriage between Henry VIII and Anne of Cleves"@en
   ; bio:date "1540-07-09"
   ; bio:partner _:henryviii, _:annecleves
   .
@@ -279,6 +307,7 @@ _:annecleves
 
 _:marriage5
   a bio:Marriage
+  ; qrmm:prose "The marriage of Henry VIII and Catherine Howard"@en
   ; bio:date "1540-07-28"
   ; bio:partner _:henryviii, _:cathhoward
   ; bio:place <http://dbpedia.org/resource/Oatlands_Palace>
@@ -292,7 +321,7 @@ _:cathhoward
   
 _:cathhoward-death
   a bio:Execution
-  ; rdfs:label "The beheading of Catherine Howard"
+  ; rdfs:label "The beheading of Catherine Howard"@en
   ; bio:date "1542-02-13"
   ; bio:place <http://dbpedia.org/resource/Tower_of_London>
   ; bio:principal _:cathhoward
@@ -300,7 +329,7 @@ _:cathhoward-death
 
 _:marriage6
   a bio:Marriage
-  ; rdfs:label "The marriage between Henry VIII and Catherine Parr"
+  ; rdfs:label "The marriage between Henry VIII and Catherine Parr"@en
   ; bio:date "1543-07-12"
   ; bio:place <http://dbpedia.org/resource/Hampton_Court_Palace>
   ; bio:partner _:henryviii, _:cathparr
@@ -326,6 +355,7 @@ _:child8
   ; bio:father _:henryviii
   ; bio:event [ a bio:Birth
                 ; bio:principal _:child8
+                ; qrmm:prose "Henry FitzRoy's birth"@en
                 ; bio:date "1519-06-15"
                 ; bio:parent _:henryviii, _:elizblount
                 ; bio:place <http://dbpedia.org/resource/Blackmore>
@@ -334,42 +364,48 @@ _:child8
 
 _:marriage1-interval
   a bio:Interval
-  ; rdfs:label "The period of time during which Henry VIII and Catherine of Aragon were married"
+  ; rdfs:label "The period of time during which Henry VIII and Catherine of Aragon were married"@en
+  ; qrmm:prose "The marriage between Henry VIII and Catherine of Aragon"@en
   ; bio:initiatingEvent _:marriage1
   ; bio:concludingEvent _:annulment1
   .
 
 _:marriage2-interval
   a bio:Interval
-  ; rdfs:label "The period of time during which Henry VIII and Anne Boleyn were married"
+  ; rdfs:label "The period of time during which Henry VIII and Anne Boleyn were married"@en
+  ; qrmm:prose "The marriage between Henry VIII and Anne Boleyn"@en
   ; bio:initiatingEvent _:marriage2
   ; bio:concludingEvent _:annulment2
   .
   
 _:marriage3-interval
   a bio:Interval
-  ; rdfs:label "The period of time during which Henry VIII and Jane Seymour were married"
+  ; rdfs:label "The period of time during which Henry VIII and Jane Seymour were married"@en
+  ; qrmm:prose "The marriage between Henry VIII and Jane Seymour"@en
   ; bio:initiatingEvent _:marriage3
   ; bio:concludingEvent _:janeseymour-death
   .
 
 _:marriage4-interval
   a bio:Interval
-  ; rdfs:label "The period of time during which Henry VIII and Anne of Cleves were married"
+  ; rdfs:label "The period of time during which Henry VIII and Anne of Cleves were married"@en
+  ; qrmm:prose "The marriage between Henry VIII and Anne of Cleves"@en
   ; bio:initiatingEvent _:marriage4
   ; bio:concludingEvent _:annulment3
   .
 
 _:marriage5-interval
   a bio:Interval
-  ; rdfs:label "The period of time during which Henry VIII and Catherine Howard were married"
+  ; rdfs:label "The period of time during which Henry VIII and Catherine Howard were married"@en
+  ; qrmm:prose "The marriage between Henry VIII and Catherine Howard"@en
   ; bio:initiatingEvent _:marriage5
-  ; bio:terminatingEvent _:cathhoward-death
+  ; bio:concludingEvent _:cathhoward-death
   .
 
 _:marriage6-interval
   a bio:Interval
-  ; rdfs:label "The period of time during which Henry VIII and Catherine Parr were married"
+  ; rdfs:label "The period of time during which Henry VIII and Catherine Parr were married"@en
+  ; qrmm:prose "The marriage between Henry VIII and Catherine Parr"@en
   ; bio:initiatingEvent _:marriage6
-  ; bio:terminatingEvent _:henryviii-death
+  ; bio:concludingEvent _:death
   .
