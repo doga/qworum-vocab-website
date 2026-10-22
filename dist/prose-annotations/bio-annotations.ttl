@@ -55,7 +55,7 @@ bio:Interval qrmm:prose 'an interval'@en .
 bio:Investiture qrmm:prose 'an investiture'@en .
 bio:keywords qrmm:prose 'is described by the keywords'@en .
 bio:event qrmm:prose 'was involved in'@en .
-bio:Marriage qrmm:prose 'a marriage'@en .
+bio:Marriage qrmm:prose 'a marriage ceremony'@en .
 bio:mother qrmm:prose 'is the child of'@en .
 bio:Murder qrmm:prose 'a murder'@en .
 bio:Naturalization qrmm:prose 'a naturalisation'@en .

@@ -192,7 +192,7 @@ _:child5
 
 _:marriage2
   a bio:Marriage
-  ; rdfs:label "The marriage of Henry VIII and Anne Boleyn"@en
+  ; rdfs:label "The marriage ceremony of Henry VIII and Anne Boleyn"@en
   ; bio:date "1533-01-25"
   ; bio:partner _:henryviii, _:anneboleyn
   ; bio:place <http://dbpedia.org/resource/Westminster_Abbey>
@@ -238,7 +238,7 @@ _:child6
 
 _:marriage3
   a bio:Marriage
-  ; qrmm:prose "The marriage of Henry VIII and Jane Seymour"@en
+  ; qrmm:prose "The marriage ceremony of Henry VIII and Jane Seymour"@en
   ; bio:date "1536-05-20"
   ; bio:partner _:henryviii, _:janeseymour
   ; bio:place <http://dbpedia.org/resource/York_Place>
@@ -285,7 +285,7 @@ _:child7
 
 _:marriage4
   a bio:Marriage
-  ; qrmm:prose "The marriage of Henry VIII and Jane Seymour"@en
+  ; qrmm:prose "The marriage ceremony of Henry VIII and Jane Seymour"@en
   ; bio:date "1540-01-06"
   ; bio:partner _:henryvii, _:annecleves
   ; bio:place <http://dbpedia.org/resource/Palace_of_Placentia>
@@ -307,7 +307,7 @@ _:annecleves
 
 _:marriage5
   a bio:Marriage
-  ; qrmm:prose "The marriage of Henry VIII and Catherine Howard"@en
+  ; qrmm:prose "The marriage ceremony of Henry VIII and Catherine Howard"@en
   ; bio:date "1540-07-28"
   ; bio:partner _:henryviii, _:cathhoward
   ; bio:place <http://dbpedia.org/resource/Oatlands_Palace>
@@ -329,7 +329,7 @@ _:cathhoward-death
 
 _:marriage6
   a bio:Marriage
-  ; rdfs:label "The marriage between Henry VIII and Catherine Parr"@en
+  ; rdfs:label "The marriage ceremony of Henry VIII and Catherine Parr"@en
   ; bio:date "1543-07-12"
   ; bio:place <http://dbpedia.org/resource/Hampton_Court_Palace>
   ; bio:partner _:henryviii, _:cathparr
