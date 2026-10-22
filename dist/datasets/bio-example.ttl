@@ -87,7 +87,7 @@ _:burial
 
 _:marriage1
   a bio:Marriage
-  ; rdfs:label "The marriage of Henry VIII and Catherine of Aragon"@en
+  ; rdfs:label "The marriage ceremony of Henry VIII and Catherine of Aragon"@en
   ; bio:date "1509-06-11"
   ; bio:place <http://dbpedia.org/resource/Palace_of_Placentia>
   ; bio:partner _:henryviii, _:catharagon
