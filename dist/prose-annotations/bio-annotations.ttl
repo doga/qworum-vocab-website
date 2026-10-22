@@ -65,7 +65,7 @@ bio:Ordination qrmm:prose 'an ordination'@en .
 bio:organization qrmm:prose 'has involved'@en .
 bio:parent qrmm:prose 'had as parent'@en .
 bio:participant qrmm:prose 'was involved in'@en .
-bio:partner qrmm:prose 'was involved as partner in'@en .
+bio:partner qrmm:prose 'involved'@en .
 bio:Performance qrmm:prose 'a performance'@en .
 bio:place qrmm:prose 'happened in'@en .
 bio:position qrmm:prose 'occupied the post'@en .
