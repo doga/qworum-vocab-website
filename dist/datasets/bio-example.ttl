@@ -1,4 +1,4 @@
-# https://vocab.org/bio/#agent:~:text=A%20Biography%20of%20Henry%20VIII%2C%20King%20of%20England
+# https://vocab.qworum.net/datasets/bio-example.ttl
 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX bio: <http://purl.org/vocab/bio/0.1/>

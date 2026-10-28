@@ -1,0 +1,22 @@
+# https://vocab.qworum.net/prose-annotations/rdf-and-rdfs-annotations.ttl
+
+PREFIX qrmm: <https://vocab.qworum.net/qrmm.ttl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+PREFIX spdx: <https://spdx.org/rdf/3.0.1/terms/Core/>
+PREFIX spdxs: <https://spdx.org/rdf/3.0.1/terms/Software/>
+PREFIX spdxsec: <https://spdx.org/rdf/3.0.1/terms/Security/>
+PREFIX spdxl: <https://spdx.org/rdf/3.0.1/terms/Licensing/>
+PREFIX spdxsl: <https://spdx.org/rdf/3.0.1/terms/SimpleLicensing/>
+PREFIX spdxel: <https://spdx.org/rdf/3.0.1/terms/ExpandedLicensing/>
+PREFIX spdxd: <https://spdx.org/rdf/3.0.1/terms/Dataset/>
+PREFIX spdxai: <https://spdx.org/rdf/3.0.1/terms/AI/>
+PREFIX spdxb: <https://spdx.org/rdf/3.0.1/terms/Build/>
+PREFIX spdxlite: <https://spdx.org/rdf/3.0.1/terms/Lite/>
+PREFIX spdxx: <https://spdx.org/rdf/3.0.1/terms/Extension/>
+
+[] qrmm:begin [].
+
+# spdx:a qrmm:prose ''@en .
+
+[] qrmm:end [].
