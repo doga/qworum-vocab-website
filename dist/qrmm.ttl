@@ -13,7 +13,29 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
   rdfs:label 'QRMM Ontology'@en;
   rdfs:comment '''
     A general-purpose ontology.
-  '''@en.
+  '''@en ;
+  vann:example '''
+    PREFIX foaf:   <http://xmlns.com/foaf/0.1/>
+    PREFIX qrmm:   <https://vocab.qworum.net/qrmm.ttl#>
+    PREFIX qrmd:   <https://vocab.qworum.net/qrmd.ttl#>
+    PREFIX :       <http://site.example/>
+
+    [] qrmm:begin [].
+
+    :jonka
+      a foaf:Person ;
+      foaf:name "Jon Ka".
+
+    :jimdo
+      a foaf:Person ;
+      foaf:name "Jim Do".
+
+    << :jimdo foaf:weblog "https://weblog.jimdo.me"^^qrmd:anyIRI >> :acc :jonka .
+
+    :acc qrmm:prose 'according to :object, :subject'@en.
+
+    [] qrmm:end [].
+  '''^^qrmd:turtle.
 
 qrmm:prose a rdf:Property ;
   rdfs:label 'Prose'@en;

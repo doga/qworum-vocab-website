@@ -12,7 +12,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
   vann:preferredNamespaceUri 'https://vocab.qworum.net/qrmd.ttl#'^^xsd:anyURI ;
   rdfs:label 'QRMD Ontology'@en;
   rdfs:comment '''
-    Defines datatypes.
+    Defines some general-purpose datatypes.
   '''@en.
 
 qrmd:anyIRI a rdfs:Datatype ;
@@ -21,6 +21,14 @@ qrmd:anyIRI a rdfs:Datatype ;
     A literal that is an IRI. When an IRI does not lead to the definition of an RDF resource, then the IRI should be contained in an RDF literal.
   '''@en;
   skos:exactMatch xsd:anyURI .
+
+qrmd:turtle a rdfs:Datatype ;
+  rdfs:label 'RDF/Turtle code'@en;
+  rdfs:comment '''
+    A textual syntax for RDF called Turtle that allows an RDF graph to be completely written in a compact and natural text form.
+  '''@en;
+  rdfs:range rdfs:Literal ;
+  rdfs:seeAlso 'https://www.w3.org/TR/rdf12-turtle/'^^qrmd:anyIRI .
 
 qrmd:json a rdfs:Datatype ;
   rdfs:label 'JSON'@en;
@@ -49,7 +57,6 @@ qrmd:markdown a rdfs:Datatype ;
     'https://en.wikipedia.org/wiki/Markdown'^^qrmd:anyIRI ,
     'https://daringfireball.net/projects/markdown/'^^qrmd:anyIRI .
 
-qrmd:md skos:exactMatch qrmd:markdown .
 
 qrmd:mermaid a rdfs:Datatype ;
   rdfs:label 'Mermaid diagram'@en;
@@ -58,5 +65,3 @@ qrmd:mermaid a rdfs:Datatype ;
   '''@en;
   rdfs:range rdfs:Literal ;
   rdfs:seeAlso 'https://mermaid.ai/open-source/intro/'^^qrmd:anyIRI .
-
-qrmd:mmd skos:exactMatch qrmd:mermaid .
