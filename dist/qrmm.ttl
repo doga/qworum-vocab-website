@@ -18,7 +18,11 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 qrmm:prose a rdf:Property ;
   rdfs:label 'Prose'@en;
   rdfs:comment '''
-    The need to translate RDF into human prose warrants this new property. An RDF statement can be turned into human prose by concatenating the `qrmm:prose` values of the statement's subject, predicate and object (or in the reverse order). Note that this translation mechanism is applicable to many mainstream human languages, but not to all languages. In theory, `rdfs:label` could have been used for this purpose, but there are many ontologies and datasets out in the wild already that use `rdfs:label` differently.
+    This property is used for translating RDF statements into human languages. RDF terms are first linked with their human-language translations through `qrmm:prose` statements, and then the actual translation process involves replacing each term in an RDF statement with its prose literal.
+
+    By default, in a human translation the subject's translation is placed at the beginning of the produced statement, the predicates's translation is placed in the middle, and the object's translation is at the end. Any `:subject` and/or `:object` placeholder in a predicates's translation will override these default placements.
+
+    RDF statements whose predicate is `qrmm:prose` are normally considered metadata and they are not meant to be translated.
   '''@en;
   rdfs:range rdfs:Literal ;
   skos:closeMatch rdfs:label .
