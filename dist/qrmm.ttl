@@ -45,7 +45,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
    JewnutmsyQAAAABpNiB2SV9QIYiQ9/Xi7jwYIlFPcFAPVR2G5ckh5ATjSlP7rCfQ
    b7gKqPxbyxbhljGygHQPnqau1eBzrQD5QVplPEDnemrnfmkrpx0GmhCfokxYz9jj
    FtCgazStmsuOXF9SFQE=
-   -----END PGP MESSAGE-----''\'@en  >> qrmm:pgpmessage true .
+   -----END PGP MESSAGE-----''\'@en  >> qrmm:pgpencrypted true .
 
     [] qrmm:end [].
   '''^^qrmd:turtle .
