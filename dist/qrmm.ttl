@@ -65,7 +65,7 @@ qrmm:prose a rdf:Property ;
 qrmm:pgpencrypted a rdf:Property ;
   rdfs:label 'Marker for PGP-encrypted literals'@en;
   rdfs:comment '''
-    Indicates whether the literal in the subject triple is PGP-encrypted. This predicate is useful when data should be encrypted at rest to ensure confidentiality, and/or the data should be signed to certify provenance. Note that the triple containing the literal does not have to be repeated as a separate statement to be a fact.
+    Indicates whether the literal in the subject triple is PGP-encrypted. This predicate is useful when data should be encrypted at rest to ensure confidentiality. Note that the triple containing the literal does not have to be repeated as a separate statement to be a fact.
   '''@en;
   rdfs:range xsd:boolean .
 
