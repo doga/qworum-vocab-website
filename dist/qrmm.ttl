@@ -2,8 +2,9 @@ BASE <https://vocab.qworum.net/qrmm.ttl>
 
 PREFIX qrmm: <#>
 PREFIX qrmd: <https://vocab.qworum.net/qrmd.ttl#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 PREFIX vann: <http://purl.org/vocab/vann/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
@@ -15,10 +16,11 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     A general-purpose ontology.
   '''@en ;
   vann:example '''
-    PREFIX foaf:   <http://xmlns.com/foaf/0.1/>
-    PREFIX qrmm:   <https://vocab.qworum.net/qrmm.ttl#>
-    PREFIX qrmd:   <https://vocab.qworum.net/qrmd.ttl#>
-    PREFIX :       <http://site.example/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX qrmm: <https://vocab.qworum.net/qrmm.ttl#>
+    PREFIX qrmd: <https://vocab.qworum.net/qrmd.ttl#>
+    PREFIX :     <http://site.example/>
 
     [] qrmm:begin [].
 
@@ -34,8 +36,19 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
     :acc qrmm:prose 'according to :object, :subject'@en.
 
+    << :xyz rdf:comment ''\'-----BEGIN PGP MESSAGE-----
+
+   xEYGAQobIHZJX1AhiJD39eLuPBgiUU9wUA9VHYblySHkBONKU/usyxhsTwYJppfk
+   1S36bHIrDB8eJ8GKVnCPZSXsJ7rZrMkBy0p1AAAAAABXaGF0IHdlIG5lZWQgZnJv
+   bSB0aGUgZ3JvY2VyeSBzdG9yZToKCi0gdG9mdQotIHZlZ2V0YWJsZXMKLSBub29k
+   bGVzCsKYBgEbCgAAACkFgmOYo2MiIQbLGGxPBgmml+TVLfpscisMHx4nwYpWcI9l
+   JewnutmsyQAAAABpNiB2SV9QIYiQ9/Xi7jwYIlFPcFAPVR2G5ckh5ATjSlP7rCfQ
+   b7gKqPxbyxbhljGygHQPnqau1eBzrQD5QVplPEDnemrnfmkrpx0GmhCfokxYz9jj
+   FtCgazStmsuOXF9SFQE=
+   -----END PGP MESSAGE-----''\'@en  >> qrmm:pgpmessage true .
+
     [] qrmm:end [].
-  '''^^qrmd:turtle.
+  '''^^qrmd:turtle .
 
 qrmm:prose a rdf:Property ;
   rdfs:label 'Prose'@en;
@@ -48,6 +61,13 @@ qrmm:prose a rdf:Property ;
   '''@en;
   rdfs:range rdfs:Literal ;
   skos:closeMatch rdfs:label .
+
+qrmm:pgpencrypted a rdf:Property ;
+  rdfs:label 'Marker for PGP-encrypted literals'@en;
+  rdfs:comment '''
+    Indicates whether the literal in the subject triple is PGP-encrypted. This predicate is useful when data should be encrypted at rest to ensure confidentiality, and/or the data should be signed to certify provenance. Note that the triple containing the literal does not have to be repeated as a separate statement to be a fact.
+  '''@en;
+  rdfs:range xsd:boolean .
 
 qrmm:begin a rdf:Property ;
   rdfs:label 'Beginning of an RDF file'@en;
